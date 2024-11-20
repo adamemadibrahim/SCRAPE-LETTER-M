@@ -37,7 +37,7 @@ def get_business_type(url):
         return None
 
 # Load the CSV file containing the business links
-file_path = 'B_GROUP.csv'
+file_path = 'M_GROUP.csv'
 
 try:
     data = pd.read_csv(file_path)
@@ -65,7 +65,7 @@ for index, row in data.iterrows():
 data['Business Type'] = business_types
 
 # Save the updated dataframe to a new CSV file
-output_file_path = 'B_GROUP_with_business_type.csv'
+output_file_path = 'M_GROUP_with_business_type.csv'
 data.to_csv(output_file_path, index=False)
 
 print(f"Updated data saved to {output_file_path}")
